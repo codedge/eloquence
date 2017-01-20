@@ -23,6 +23,12 @@
             "role": "Developer"
         }
     ],
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codedge/hookable"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
         "codedge/hookable": "5.3.*",
