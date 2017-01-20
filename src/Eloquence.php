@@ -2,9 +2,9 @@
 
 namespace Sofa\Eloquence;
 
-use Sofa\Hookable\Hookable;
+use Codedge\Hookable\Hookable;
 use Sofa\Eloquence\Mutator\Mutator;
-use Sofa\Hookable\Contracts\ArgumentBag;
+use Codedge\Hookable\Contracts\ArgumentBag;
 use Sofa\Eloquence\Query\Builder as QueryBuilder;
 use Sofa\Eloquence\Contracts\Mutator as MutatorContract;
 use Sofa\Eloquence\AttributeCleaner\Observer as AttributeCleaner;
@@ -63,7 +63,7 @@ trait Eloquence
      * Determine whether where should be treated as whereNull.
      *
      * @param  string $method
-     * @param  Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  Codedge\Hookable\Contracts\ArgumentBag $args
      * @return boolean
      */
     protected function isWhereNull($method, ArgumentBag $args)
@@ -74,7 +74,7 @@ trait Eloquence
     /**
      * Determine whether where is a whereNull by the arguments passed to where method.
      *
-     * @param  Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  Codedge\Hookable\Contracts\ArgumentBag $args
      * @return boolean
      */
     protected function isWhereNullByArgs(ArgumentBag $args)

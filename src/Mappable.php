@@ -5,7 +5,7 @@ namespace Sofa\Eloquence;
 use LogicException;
 use Illuminate\Support\Arr;
 use Sofa\Eloquence\Mappable\Hooks;
-use Sofa\Hookable\Contracts\ArgumentBag;
+use Codedge\Hookable\Contracts\ArgumentBag;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -62,7 +62,7 @@ trait Mappable
      *
      * @param  \Sofa\Eloquence\Builder $query
      * @param  string $method
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @return mixed
      */
     protected function mappedQuery(Builder $query, $method, ArgumentBag $args)
@@ -82,7 +82,7 @@ trait Mappable
      * Adjust mapped columns for select statement.
      *
      * @param  \Sofa\Eloquence\Builder $query
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @return void
      */
     protected function mappedSelect(Builder $query, ArgumentBag $args)
@@ -128,7 +128,7 @@ trait Mappable
      *
      * @param  \Sofa\Eloquence\Builder $query
      * @param  string $method
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @param  string $mapping
      * @return mixed
      */
@@ -148,7 +148,7 @@ trait Mappable
      *
      * @param  \Sofa\Eloquence\Builder $query
      * @param  string $method
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @param  string $target
      * @param  string $column
      * @return mixed
@@ -170,7 +170,7 @@ trait Mappable
      * Order query by mapped attribute.
      *
      * @param  \Sofa\Eloquence\Builder $query
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @param  string $table
      * @param  string $column
      * @param  string $target
@@ -192,7 +192,7 @@ trait Mappable
      * Get an array with the values of given mapped attribute.
      *
      * @param  \Sofa\Eloquence\Builder $query
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @param  string $table
      * @param  string $column
      * @return array
@@ -339,7 +339,7 @@ trait Mappable
      *
      * @param  \Sofa\Eloquence\Builder $query
      * @param  string $method
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @param  string $target
      * @param  string $column
      * @return \Sofa\Eloquence\Builder
@@ -361,7 +361,7 @@ trait Mappable
      * Get the relation constraint closure.
      *
      * @param  string $method
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @return \Closure
      */
     protected function getMappedWhereConstraint($method, ArgumentBag $args)
@@ -390,7 +390,7 @@ trait Mappable
      * Determine the operator for count relation query and set 'not' appropriately.
      *
      * @param  string $method
-     * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
+     * @param  \Codedge\Hookable\Contracts\ArgumentBag $args
      * @return string
      */
     protected function getMappedOperator($method, ArgumentBag $args)

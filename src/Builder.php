@@ -4,7 +4,7 @@ namespace Sofa\Eloquence;
 
 use Sofa\Eloquence\Searchable\Column;
 use Illuminate\Database\Query\Expression;
-use Sofa\Hookable\Builder as HookableBuilder;
+use Codedge\Hookable\Builder as HookableBuilder;
 use Sofa\Eloquence\Searchable\ColumnCollection;
 use Sofa\Eloquence\Contracts\Relations\JoinerFactory;
 use Sofa\Eloquence\Contracts\Searchable\ParserFactory;
