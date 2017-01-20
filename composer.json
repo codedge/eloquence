@@ -1,10 +1,10 @@
 {
-    "name": "sofa/eloquence",
-    "description": "Flexible Searchable, Mappable, Metable, Validation and more extensions for Laravel Eloquent ORM.",
+    "name": "codedge/eloquence",
+    "description": "Flexible Searchable, Mappable, Metable, Validation and more extensions for Laravel Eloquent ORM - improved.",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/jarektkaczyk/eloquence/issues",
-        "source": "https://github.com/jarektkaczyk/eloquence"
+        "issues": "https://github.com/codedge/eloquence/issues",
+        "source": "https://github.com/codedge/eloquence"
     },
     "keywords": [
         "laravel",
@@ -12,19 +12,20 @@
         "metable",
         "searchable",
         "mappable",
-        "mutable"
+        "mutable",
+        "relations"
     ],
     "authors": [
         {
-            "name": "Jarek Tkaczyk",
-            "email": "jarek@softonsofa.com",
-            "homepage": "http://softonsofa.com/",
+            "name": "Holger Lösken",
+            "email": "holger.loesken@codedge.de",
+            "homepage": "http://codedge.de",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.6.4",
-        "sofa/hookable": "5.3.*",
+        "codedge/hookable": "5.3.*",
         "illuminate/database": "5.3.*"
     },
     "require-dev": {
