@@ -140,4 +140,31 @@ class Hooks
 
         throw new BadMethodCallException("Method [{$method}] doesn't exist on this object.");
     }
+
+    /**
+     * Register hook on hasOne method.
+     *
+     * @return \Closure
+     */
+    public function hasOne()
+    {
+        return function ($next, $value, $bag) {
+            $related = $bag->get('related');
+            $foreignKey = $bag->get('foreignKey');
+            $localKey = $bag->get('localKey');
+
+            $localKey = $localKey ?: $this->getKeyName();
+
+            $instance = new $related;
+            $foreignKey = $foreignKey ?: $this->getForeignKey();
+
+            if($instance->hasMapping($foreignKey)) {
+                $foreignKey = $instance->getMappingForAttribute($foreignKey);
+            }
+
+            $value = $this->getHasOneRelation($instance->newQuery(), $this, $instance->getTable().'.'.$foreignKey, $localKey);
+
+            return $next($value, $bag);
+        };
+    }
 }

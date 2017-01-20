@@ -51,6 +51,7 @@ trait Mappable
                 '__isset',
                 '__unset',
                 'queryHook',
+                'hasOne',
             ] as $method) {
             static::hook($method, $hooks->{$method}());
         }
@@ -595,5 +596,19 @@ trait Mappable
     public function getMaps()
     {
         return (property_exists($this, 'maps')) ? $this->maps : [];
+    }
+
+    /**
+     * Get the HasOne relation with mapped foreign key.
+     *
+     * @param $builder
+     * @param $model
+     * @param string $foreignKey
+     * @param string $localKey
+     * @return HasOne
+     */
+    protected function getHasOneRelation($builder, $model, $foreignKey, $localKey)
+    {
+        return new HasOne($builder, $model, $foreignKey, $localKey);
     }
 }
