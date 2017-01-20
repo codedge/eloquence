@@ -21,17 +21,17 @@
             "email": "holger.loesken@codedge.de",
             "homepage": "http://codedge.de",
             "role": "Developer"
-        }
-    ],
-	"repositories": [
+        },
         {
-            "type": "vcs",
-            "url": "https://github.com/codedge/hookable"
+            "name": "Jarek Tkaczyk ",
+            "email": "jarek@softonsofa.com",
+            "homepage": "http://softonsofa.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.6.4",
-        "codedge/hookable": "5.3.*",
+        "codedge/hookable": "dev-master",
         "illuminate/database": "5.3.*"
     },
     "require-dev": {
