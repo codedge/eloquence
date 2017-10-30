@@ -31,7 +31,7 @@
     ],
     "require": {
         "php": ">=5.6.4",
-        "codedge/hookable": "dev-master",
+        "codedge/hookable": "5.5.*",
         "illuminate/database": "~5.3"
     },
     "require-dev": {
